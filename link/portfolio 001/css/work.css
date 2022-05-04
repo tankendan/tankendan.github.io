@@ -1,0 +1,202 @@
+/* common */
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  margin: 0 16px;
+}
+
+h2{
+  font-weight: normal;
+  font-size: 10px;
+  color: orangered;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* anime */
+.workAnimation{
+  background: #000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  background-image: url(../img/ミサイルトラック.png);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center;
+  animation: workMove 2.5s forwards;
+}
+
+/* animation move */
+
+@keyframes workMove{
+  0%{
+    opacity: 1;
+  }
+   50%{
+     opacity: 1;
+   }
+  100%{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+/* header */
+
+header{
+  width: 100%;
+  height: 100px;
+
+  background: #000;
+  background-image: url(../img/ベルトコンベア.png);
+  background-size: 150px;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+/* hero */
+.hero{
+  width: 100%;
+  height: 300px;
+  padding-top: 32px;
+
+  background: #000;
+}
+.hero img{
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+
+  transition: opacity 1s;
+}
+
+.hero img.current{
+  opacity: 1;
+}
+
+/* list */
+.list{
+  background: linear-gradient(#000, #fff);
+}
+.list h1{
+  text-align: center;
+  color: orangered;
+  font-size: 32px;
+}
+.list{
+  padding: 80px 0;
+}
+
+.list ul{
+  margin-top: 32px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.list li{
+  width: calc((100% - 32px) / 2);
+  list-style: none;
+  text-align: center;
+  margin-top: 64px;
+}
+.list li img{
+  width: 80%;
+}
+
+.list li:hover{
+  opacity: 0.5;
+}
+
+.list .back{
+  display: block;
+  width: 70%;
+  line-height: 48px;
+  border: 1px solid orangered;
+  border-radius: 12px;
+  text-align: center;
+  margin: 32px auto 0;
+  color: orangered;
+}
+
+.back:hover{
+  opacity: .5;
+}
+
+/* art */
+
+.art{
+  width: 100%;
+  height: 100px;
+
+  background-image: url(../img/荷下ろし.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* footer */
+
+footer{
+  width: 100%;
+  color: #4c4948;
+  background: #fff;
+  padding: 16px 0;
+  text-align: center;
+}
+
+
+@media(min-width: 768px){
+    /* header */
+    header{
+      height: 150px;
+  
+      background-size: 250px;
+    }
+  
+    /* hero */
+    .hero{
+      height: 600px;
+    }
+    .hero img{
+      height: 600px;
+    }
+    .list h2{
+      font-size: 18px;
+    }
+
+    .list li img{
+      width: 60%;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1068px){
+  .list li img{
+    width: 50%;
+  }
+}
+
+@media(min-width: 1069px) {
+  .hero{
+    height: 800px;
+  }
+  .hero img{
+    height: 800px;
+  }
+  .list li img{
+    width: 40%;
+  }
+}

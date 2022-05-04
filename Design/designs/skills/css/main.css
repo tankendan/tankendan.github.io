@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Oleo Script', cursive;
+  color: #fff;
+}
+
+* li {
+  list-style: none;
+}
+
+body {
+  background: #373535;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  background: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header p {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 80px;
+  color: black;
+}
+
+header .anim {
+  width: 20%;
+  height: 100%;
+}
+
+.list {
+  width: 1300px;
+  height: 1500px;
+  margin: 64px auto;
+}
+
+.list .container {
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list .container .main {
+  width: 100%;
+  height: calc((100% - 64px) / 3);
+}
+
+.list .container .main .ttl {
+  text-align: center;
+  font-size: 64px;
+}
+
+.list .container .main ul {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 32px;
+  border-bottom: 1px solid;
+}
+
+.list .container .main ul li {
+  width: calc((100% - 64px) / 3);
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 42px;
+  color: var(--clr);
+}
+
+.list .container .study {
+  width: 100%;
+  height: calc((100% - 64px) / 3);
+}
+
+.list .container .study .ttl {
+  text-align: center;
+  font-size: 64px;
+}
+
+.list .container .study ul {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 32px;
+  border-bottom: 1px solid;
+}
+
+.list .container .study ul li {
+  width: calc((100% - 64px) / 3);
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 42px;
+  color: var(--clr);
+}
+
+.list .container .sikaku {
+  width: 100%;
+  height: calc((100% - 64px) / 3);
+}
+
+.list .container .sikaku .ttl {
+  text-align: center;
+  font-size: 64px;
+}
+
+.list .container .sikaku ul {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 32px;
+  border-bottom: 1px solid;
+}
+
+.list .container .sikaku ul li {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 42px;
+  color: var(--clr);
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: aqua;
+  font-size: 42px;
+}
+
+footer small {
+  color: #000;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  header {
+    height: 200px;
+  }
+  header p {
+    width: 30%;
+    font-size: 32px;
+  }
+  header .anim {
+    width: 30%;
+  }
+  .list {
+    width: 1000px;
+  }
+  .list .container .main .ttl,
+  .list .container .study .ttl,
+  .list .container .sikaku .ttl {
+    font-size: 42px;
+  }
+  .list .container .main ul li,
+  .list .container .study ul li,
+  .list .container .sikaku ul li {
+    font-size: 30px;
+  }
+  footer {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    height: 200px;
+  }
+  header p {
+    width: 30%;
+    font-size: 42px;
+  }
+  header .anim {
+    width: 30%;
+  }
+  .list {
+    width: 700px;
+  }
+  .list .container .main .ttl,
+  .list .container .study .ttl,
+  .list .container .sikaku .ttl {
+    font-size: 32px;
+  }
+  .list .container .main ul li,
+  .list .container .study ul li,
+  .list .container .sikaku ul li {
+    font-size: 25px;
+  }
+  footer {
+    height: 100px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  header {
+    height: 150px;
+  }
+  header p {
+    width: 30%;
+    font-size: 28px;
+  }
+  header .anim {
+    width: 30%;
+  }
+  .list {
+    width: 400px;
+  }
+  .list .container .main .ttl,
+  .list .container .study .ttl,
+  .list .container .sikaku .ttl {
+    font-size: 32px;
+  }
+  .list .container .main ul,
+  .list .container .study ul,
+  .list .container .sikaku ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list .container .main ul li,
+  .list .container .study ul li,
+  .list .container .sikaku ul li {
+    white-space: nowrap;
+    height: 20%;
+    font-size: 18px;
+  }
+  footer {
+    height: 100px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+  header {
+    height: 150px;
+  }
+  header p {
+    width: 30%;
+    font-size: 28px;
+  }
+  header .anim {
+    width: 30%;
+  }
+  .list {
+    width: 300px;
+  }
+  .list .container .main .ttl,
+  .list .container .study .ttl,
+  .list .container .sikaku .ttl {
+    font-size: 32px;
+  }
+  .list .container .main ul,
+  .list .container .study ul,
+  .list .container .sikaku ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list .container .main ul li,
+  .list .container .study ul li,
+  .list .container .sikaku ul li {
+    white-space: nowrap;
+    height: 20%;
+    font-size: 18px;
+  }
+  footer {
+    height: 100px;
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

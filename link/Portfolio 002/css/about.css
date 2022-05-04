@@ -1,0 +1,182 @@
+/* common */
+body{
+  margin: 0;
+}
+
+/* animation */
+.animation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #fff;
+  background-image: url(../img/ミサイルトラック.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  z-index: 1;
+
+  animation: move 3s forwards;
+}
+
+@keyframes move {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* profile */
+.profile{
+  width: 100%;
+  height: 300px;
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
+.pic{
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pic img{
+  max-height: 90%;
+  transition: transform 1s, opacity 1s;
+}
+
+.pic img.hidden{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* info */
+.info{
+  width: 100%;
+  height: 100px;
+}
+
+.name{
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  
+  position: relative;
+}
+
+.name img{
+  max-width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: opacity 1s;
+}
+
+.name img.hidden{
+  opacity: 0;
+}
+/* skill */
+
+.skill{
+  width: 100%;
+  height: 350px;
+}
+
+.list {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.list img{
+  max-height: 100%;
+  
+  transition: opacity 1s, transform 1s;
+}
+
+.list img.hidden{
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+/* back */
+.back{
+  width: 100%;
+  height: 100px;
+
+  position: relative;
+}
+
+.back p{
+  color: brown;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back p:hover{
+  cursor: pointer;
+  opacity: .5;
+}
+/* footer */
+
+footer{
+  background-image: url(../img/背景.png);
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+
+  position: relative;
+}
+
+footer small{
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px){
+  .tab{
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 70%;
+    display: flex;
+    margin-top: 64px;
+  }
+  .tab-menu{
+    display: block;
+    width: 50%;
+  }
+
+  /* profile */
+  .profile{
+    margin-right: 32px;
+    width: calc(100% / 2);
+  }
+  .list img{
+    max-width: 100%;
+  }
+}
+
+@media(min-width: 1024px){
+  .tab-menu{
+    width: 40%;
+  }
+}

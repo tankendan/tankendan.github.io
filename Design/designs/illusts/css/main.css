@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Oleo Script', cursive;
+  color: #fff;
+}
+
+* li {
+  list-style: none;
+}
+
+body {
+  background: #373535;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  background: orangered;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header p {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 64px;
+}
+
+header .anime {
+  width: 40%;
+  height: 100%;
+}
+
+.list {
+  width: 1400px;
+  height: 1500px;
+  margin: 64px auto;
+}
+
+.list ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list ul li {
+  min-width: calc((100% - 80px) / 4);
+  width: calc((100% - 80px) / 4);
+  height: calc((100% - 80px) / 4);
+  border-bottom: 1px solid orangered;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list ul li img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.list ul li img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.list ul li.appear {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0px;
+  border-bottom: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.list ul li.appear img {
+  width: 50%;
+  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: no-drop;
+}
+
+.list ul li.appear img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: orangered;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  header p {
+    font-size: 42px;
+  }
+  .list {
+    width: 1000px;
+    height: 1000px;
+  }
+  .list ul li {
+    min-width: calc((100% - 80px) / 3);
+    width: calc((100% - 80px) / 3);
+    height: calc((100% - 80px) / 5);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    height: 200px;
+  }
+  header p {
+    font-size: 32px;
+  }
+  .list {
+    width: 700px;
+    height: 700px;
+  }
+  .list ul li {
+    min-width: calc((100% - 80px) / 3);
+    width: calc((100% - 80px) / 3);
+    height: calc((100% - 80px) / 5);
+  }
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  header {
+    height: 200px;
+  }
+  header p {
+    font-size: 24px;
+  }
+  .list {
+    width: 400px;
+    height: 600px;
+  }
+  .list ul li {
+    min-width: calc((100% - 80px) / 3);
+    width: calc((100% - 80px) / 3);
+    height: calc((100% - 80px) / 5);
+  }
+  .list ul li img {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+  header {
+    height: 200px;
+  }
+  header p {
+    font-size: 16px;
+  }
+  .list {
+    width: 300px;
+    height: 300px;
+  }
+  .list ul li {
+    min-width: calc((100% - 24px) / 3);
+    width: calc((100% - 24px) / 3);
+    height: calc((100% - 24px) / 5);
+  }
+  .list ul li img {
+    width: 60%;
+    height: 60%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
