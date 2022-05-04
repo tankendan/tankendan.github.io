@@ -147,6 +147,7 @@ header .logo a img {
   overflow: hidden;
   -webkit-box-shadow: 0 0 30px #1da1f2;
           box-shadow: 0 0 30px #1da1f2;
+  z-index: 1;
 }
 
 .list .container .first ul li img {
