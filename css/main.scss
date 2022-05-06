@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Oleo Script', cursive, sans-serif;
+  font-family: sans-serif;
 }
 // var
 $dark-gray: rgb(27, 27, 27);
@@ -229,9 +229,11 @@ header{
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          
 
             p{
               font-size: 32px;
+              font-weight: bold;
             }
 
             dl{
@@ -341,6 +343,7 @@ header{
         .portlink,
         .designlink{
             p{
+              display: block;
               margin: 24px;
             }
 
@@ -382,6 +385,18 @@ footer{
   align-items: center;
 }
 
+// animation
+@keyframes circle{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+
 // madia
 @media(min-width: 415px){
   .hero{
@@ -395,27 +410,41 @@ footer{
   }
 }
 
+
 @media(min-width: 1024px) and (max-width: 1366px){
   header{
-
-      .logo{
-        margin: 0 auto;
-        float: none;
-      }
-
-      nav{
-        display: none;
-      }
+    .logo{
+      float: none;
+      margin: 0 auto;
+    }
+    nav{
+      display: none;
+    }
   }
 
   .profile{
     width: 500px;
     height: 300px;
+      .ttl{
+        left: 25%;
+        font-size: 24px;
+        white-space: nowrap;
+      }
 
       .container{
+        .pic-con{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .pic{
+            width: 150px;
+            height: 150px;
+          }
+        }
+
         .info{
           p{
-            font-size: 20px;
+            font-weight: bold;
           }
         }
       }
@@ -423,18 +452,14 @@ footer{
 
   .work{
     width: 800px;
-    height: 300px;
+    justify-content: space-between;
+
+      .ttl{
+        left: 15%;
+      }
 
       .container{
-        .left, .right{
-          font-size: 32px;
-        }
-        .left{
-          left: 10%;
-        }
-        .right{
-          right: 10%;
-        }
+        width: 40%;
       }
   }
 }
@@ -442,378 +467,305 @@ footer{
 @media(min-width: 768px) and (max-width: 1023px){
   header{
     .logo{
-      margin: 0 auto;
+      width: 40%;
       float: none;
+      margin: 0 auto;
     }
     nav{
       display: none;
     }
   }
-  .profile{
-    width: 330px;
-    height: 200px;
 
+  .profile{
+    width: 400px;
+    height: 200px;
       .ttl{
-        font-size: 20px;
-        top: -40px;
-        left: 25%;
+        left: 50%;
+        font-size: 24px;
+        white-space: nowrap;
       }
 
       .container{
         .pic-con{
-          width: 60%;
-
-            .pic{
-              height: 50%;
-            }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .pic{
+            width: 150px;
+            height: 150px;
+          }
         }
+
         .info{
-          width: 40%;
-          display: block;
+
           p{
-            font-size: 15px;
-            text-align: left;
-            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 24px;
           }
+
           dl{
-            margin: 0;
+            margin-top: 12px;
+            text-align: center;
+            font-size: 15px;
+
+              dt{
+                font-size: 12px;
+              }
           }
+
         }
       }
   }
 
   .work{
-    width: 500px;
-    height: 200px;
-
-      #left,
-      #right{
-        font-size: 32px;
-      }
+    width: 600px;
+    height: 400px;
+    justify-content: space-between;
 
       .ttl{
-        font-size: 20px;
-        top: -40px;
-        left: 15%;
+        left: 50%;
       }
 
-      .info{
-        .portlink,
-        .designlink{
-            p{
-              margin: 0;
-              font-size: 12px;
-            }
-
-            button{
-              padding: 2px 4px;
-              margin-top: 8px;
-            }
-        }
+      .container{
+        width: 40%;
       }
   }
 }
 
 @media(min-width: 414px) and (max-width: 767px){
   header{
-    height: 50px;
-    position: relative;
-      .logo{
-        width: 30%;
-        margin-left: 32px;
-      }
-
-      nav{
-        position: absolute;
-        width: 100%;
-        height: 300px;
-        top: 50px;
-        background: gray;
-        transition: transform .5s;
-
-          ul{
-            display: block;
-
-              li{
-                width: 50%;
-                height: calc(100% / 2);
-                margin: 0 auto;
-                transition: opacity .5s;
-              }
-              li:nth-child(1){
-                transition-delay: .6s;
-              }
-              li:nth-child(2){
-                transition-delay: .9s;
-              }
-            }
-      }
-
-      nav.hidden{
-        transform: translateX(-150%);
-          ul{
-            li{
-              opacity: 0;
-            }
-          }
-      }
-
-      .menu-toggle{
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 32px;
-        margin: 4px 8px;
-
-          i.hidden{
-            display: none;
-          }
-      }
+    height: 60px;
+    .logo{
+      width: 40%;
+      float: none;
+      margin: 0 auto;
+    }
+    nav{
+      display: none;
+    }
   }
 
   .profile{
-    width: 330px;
-    height: 200px;
+    width: 300px;
+    height: 400px;
 
       .ttl{
-        font-size: 20px;
-        top: -40px;
-        left: 25%;
+        left: 50%;
+        font-size: 24px;
+        white-space: nowrap;
       }
 
       .container{
+        display: block;
         .pic-con{
-          width: 60%;
-
-            .pic{
-              height: 50%;
-            }
+          width: 100%;
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .pic{
+            width: 120px;
+            height: 120px;
+          }
         }
+
         .info{
-          width: 40%;
-          display: block;
+          width: 100%;
+          height: 50%;
+
           p{
-            font-size: 15px;
-            text-align: left;
-            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 24px;
           }
+
           dl{
-            margin: 0;
+            margin-top: 12px;
+            text-align: center;
+            font-size: 15px;
+
+              dt{
+                font-size: 12px;
+              }
           }
+
         }
       }
   }
 
   .work{
-    width: 350px;
-    height: 200px;
+    width: 300px;
+    height: 500px;
+    display: block;
+
+      .ttl{
+        left: 50%;
+        font-size: 24px;
+        white-space: nowrap;
+        top: -40px;
+      }
 
       #left,
       #right{
-        font-size: 22px;
+        top: 24%;
+        font-size: 32px;
       }
 
       #left{
-        left: -7%;
-      }
-      #right{
-        right: -7%;
+        left: -15%;
       }
 
-      .ttl{
-        font-size: 20px;
-        top: -40px;
-        left: 15%;
+      #right{
+        right: -15%;
       }
 
       .container{
-        width: 40%;
-        margin-left: auto;
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
 
-        .left, .right{
-          font-size: 18px;
-        }
-        .left{
-          left: 0%;
-        }
-        .right{
-          right: 0%;
-        }
+          ul{
+            width: 100%;
+            height: 100%;
+
+          }
       }
 
       .info{
-        width: 40%;
-        margin-left: auto;
-        margin-right: 12px;
-        .portlink,
-        .designlink{
-            p{
-              margin: 0;
-              font-size: 10px;
-            }
+        width: 100%;
+        height: 50%;
 
-            button{
-              font-size: 10px;
-              padding: 2px 4px;
-              margin-top: 8px;
+          .portlink,
+          .designlink{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            p{
+
+              margin: 8px;
+              font-size: 12px;
             }
-        }
+          }
       }
   }
 }
 
 @media(min-width: 320px) and (max-width: 413px){
   header{
-    height: 50px;
-    position: relative;
-      .logo{
-        width: 30%;
-        margin-left: 32px;
-      }
-
-      nav{
-        position: absolute;
-        width: 100%;
-        height: 300px;
-        top: 50px;
-        background: gray;
-        transition: transform .5s;
-
-          ul{
-            display: block;
-
-              li{
-                width: 50%;
-                height: calc(100% / 2);
-                margin: 0 auto;
-                transition: opacity .5s;
-              }
-              li:nth-child(1){
-                transition-delay: .6s;
-              }
-              li:nth-child(2){
-                transition-delay: .9s;
-              }
-            }
-      }
-
-      nav.hidden{
-        transform: translateX(-150%);
-          ul{
-            li{
-              opacity: 0;
-            }
-          }
-      }
-
-      .menu-toggle{
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 32px;
-        margin: 4px 8px;
-
-          i.hidden{
-            display: none;
-          }
-      }
+    height: 60px;
+    .logo{
+      width: 40%;
+      float: none;
+      margin: 0 auto;
+    }
+    nav{
+      display: none;
+    }
   }
 
   .profile{
     width: 250px;
-    height: 150px;
+    height: 280px;
 
       .ttl{
-        font-size: 15px;
-        top: -30px;
-        left: 25%;
+        left: 50%;
+        top: -35px;
+        font-size: 18px;
+        white-space: nowrap;
       }
 
       .container{
+        display: block;
         .pic-con{
-          width: 60%;
-
-            .pic{
-              height: 50%;
-            }
-        }
-        .info{
-          width: 40%;
-          display: block;
-          p{
-            font-size: 15px;
-            text-align: left;
-            margin-bottom: 8px;
+          width: 100%;
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .pic{
+            width: 80px;
+            height: 80px;
           }
+        }
+
+        .info{
+          width: 100%;
+          height: 50%;
+
+          p{
+            font-weight: bold;
+            font-size: 20px;
+          }
+
           dl{
-            margin: 0;
+            margin-top: 12px;
+            text-align: center;
             font-size: 12px;
           }
+
         }
       }
   }
 
   .work{
-    width: 250px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 280px;
+    height: 400px;
+    display: block;
+
+      .ttl{
+        left: 50%;
+        font-size: 18px;
+        white-space: nowrap;
+        top: -35px;
+      }
 
       #left,
       #right{
-        font-size: 20px;
+        top: 50%;
+        font-size: 32px;
       }
 
-      .ttl{
-        font-size: 15px;
-        top: -30px;
-        left: 20%;
+      #left{
+        left: 30%;
+      }
+
+      #right{
+        right: 30%;
       }
 
       .container{
-        width: 100%;
-        margin-left: auto;
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
 
-        .left, .right{
-          font-size: 24px;
-        }
-        .left{
-          left: 10%;
-        }
-        .right{
-          right: 10%;
-        }
+          ul{
+            width: 100%;
+            height: 100%;
+
+          }
       }
 
       .info{
         width: 100%;
-        height: 30%;
+        height: 50%;
+
           .portlink,
           .designlink{
-              p{
-                display: none;
-              }
-
-              button{
-                font-size: 8px;
-                padding: 2px 4px;
-                margin: 0;
-              }
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            p{
+              margin: 4px;
+              font-size: 8px;
+            }
           }
       }
-  }
-}
-// animation
-// animation
-@keyframes circle{
-  0%{
-    transform: rotate(0);
-  }
-  100%{
-    transform: rotate(360deg);
   }
 }
