@@ -165,57 +165,5 @@
     ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
   });
 
-  // responsive
-  const mediaQuery = window.matchMedia('(min-width: 414px) and (max-width: 1023px)')
-  const li = document.querySelectorAll('li');
-
-  if(mediaQuery.matches){
-
-    function callback(entries){
-      if(!entries[0].isIntersecting){
-        return;
-      }
-
-      setTimeout(() => {
-        li[0].classList.add('appear');
-      }, 1500);
-      setTimeout(() => {
-        li[1].classList.add('appear');
-      }, 2000);
-      setTimeout(() => {
-        li[2].classList.add('appear');
-      }, 2500);
-    }
-
-    const options = {
-      threshold: 1,
-    }
-    
-    const observer = new IntersectionObserver(callback, options);
-
-    observer.observe(ul);
-  }
-
-  const iosQuery = window.matchMedia('(min-width: 320px) and (max-width: 413px)')
-
-  if(iosQuery.matches){
-
-    function callback(entries){
-      if(!entries[0].isIntersecting){
-        return;
-      }
-        li[0].classList.add('appear');
-        li[1].classList.add('appear');
-        li[2].classList.add('appear');
-    }
-
-    const options = {
-      threshold: 1,
-    }
-    
-    const observer = new IntersectionObserver(callback, options);
-
-    observer.observe(ul);
-  }
-
+  
 }

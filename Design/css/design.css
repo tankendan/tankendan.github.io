@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Oleo Script', cursive, sans-serif;
+  font-family: cursive, fantasy, sans-serif;
 }
 
 li {
@@ -210,6 +210,7 @@ header .logo a img {
   border-radius: 30px;
   -webkit-transition: letter-spacing .5s;
   transition: letter-spacing .5s;
+  text-align: center;
 }
 
 .list .container ul li button:hover {
@@ -235,39 +236,15 @@ footer {
 @media (min-width: 1024px) and (max-width: 1366px) {
   .list {
     width: 800px;
-    height: 600px;
-  }
-}
-
-@media (min-width: 414px) and (max-width: 1023px) {
-  .list .container ul li {
-    -webkit-transform: translateY(110%);
-            transform: translateY(110%);
-    opacity: 0;
-  }
-  .list .container ul li.appear {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transition: opacity .5s, -webkit-transform .5s;
-    transition: opacity .5s, -webkit-transform .5s;
-    transition: transform .5s, opacity .5s;
-    transition: transform .5s, opacity .5s, -webkit-transform .5s;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .svg {
     width: 700px;
-    height: 400px;
   }
   .list {
     width: 700px;
-    height: 500px;
-  }
-  .list #left,
-  .list #right {
-    display: none;
   }
   .list .ttl {
     position: absolute;
@@ -275,7 +252,11 @@ footer {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    font-size: 40px;
+    font-size: 32px;
+  }
+  .list #left,
+  .list #right {
+    display: none;
   }
   .list .container {
     width: 100%;
@@ -284,21 +265,32 @@ footer {
   .list .container ul {
     width: 100%;
     height: 100%;
+    display: block;
+  }
+  .list .container ul li {
+    min-width: 100%;
+    width: 100%;
+    height: calc((100% - 66px) / 3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 22px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .list .container ul li {
-    min-width: calc((100% - 20px) / 3);
-    width: calc((100% - 20px) / 3);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .list .container ul li .box {
-    height: 80%;
+    width: 60%;
+    height: 100%;
   }
   .list .container ul li .inside1,
   .list .container ul li .inside2,
   .list .container ul li .inside3 {
-    height: 80%;
+    width: 60%;
+    height: 100%;
   }
   .list .container ul li .inside1 a,
   .list .container ul li .inside2 a,
@@ -307,34 +299,30 @@ footer {
   }
   .list .container ul li button {
     width: 100px;
-    height: 10%;
+    height: 50px;
   }
 }
 
 @media (min-width: 414px) and (max-width: 767px) {
-  header {
-    height: 50px;
-  }
   .svg {
     width: 400px;
-    height: 300px;
+    height: 400px;
   }
   .list {
     width: 400px;
-    height: 250px;
+  }
+  .list .ttl {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 32px;
   }
   .list #left,
   .list #right {
     display: none;
   }
-  .list .ttl {
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    font-size: 30px;
-  }
   .list .container {
     width: 100%;
     height: 100%;
@@ -342,136 +330,108 @@ footer {
   .list .container ul {
     width: 100%;
     height: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .list .container ul li {
-    min-width: calc((100% - 20px) / 3);
-    width: calc((100% - 20px) / 3);
-  }
-  .list .container ul li .box {
-    height: 80%;
-  }
-  .list .container ul li .inside1,
-  .list .container ul li .inside2,
-  .list .container ul li .inside3 {
-    height: 80%;
-  }
-  .list .container ul li .inside1 a,
-  .list .container ul li .inside2 a,
-  .list .container ul li .inside3 a {
-    font-size: 20px;
-  }
-  .list .container ul li button {
-    width: 50px;
-    height: 10%;
-    font-size: 12px;
-  }
-  .list .container ul li button:hover {
-    letter-spacing: 0px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 413px) {
-  .list .container ul li {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  .list .container ul li.appear {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transition: -webkit-transform .5s;
-    transition: -webkit-transform .5s;
-    transition: transform .5s;
-    transition: transform .5s, -webkit-transform .5s;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 413px) {
-  header {
-    height: 50px;
-  }
-  .svg {
-    width: 300px;
-    height: 200px;
-    margin: 0 auto 64px;
-  }
-  .list {
-    width: 300px;
-    height: 200px;
-  }
-  .list #left,
-  .list #right {
-    font-size: 20px;
-    top: 38%;
-    z-index: 1;
-  }
-  .list #right {
-    right: 15%;
-  }
-  .list #left {
-    left: 15%;
-  }
-  .list .ttl {
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    font-size: 20px;
-  }
-  .list .container {
-    width: 100%;
-    height: 100%;
-  }
-  .list .container ul {
-    width: 100%;
-    height: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: block;
   }
   .list .container ul li {
     min-width: 100%;
-    height: 90%;
+    width: 100%;
+    height: calc((100% - 66px) / 3);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 22px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .list .container ul li .box {
-    width: 50%;
-    height: 80%;
+    width: 60%;
+    height: 100%;
   }
   .list .container ul li .inside1,
   .list .container ul li .inside2,
   .list .container ul li .inside3 {
-    width: 50%;
-    height: 80%;
+    width: 60%;
+    height: 100%;
   }
   .list .container ul li .inside1 a,
   .list .container ul li .inside2 a,
   .list .container ul li .inside3 a {
-    font-size: 16px;
+    font-size: 24px;
   }
   .list .container ul li button {
-    width: 50px;
-    height: 10%;
-    font-size: 8px;
-    line-height: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
   }
-  .list .container ul li button:hover {
-    letter-spacing: 0px;
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+  .svg {
+    width: 300px;
+    height: 300px;
+  }
+  .list {
+    width: 300px;
+  }
+  .list .ttl {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 32px;
+  }
+  .list #left,
+  .list #right {
+    display: none;
+  }
+  .list .container {
+    width: 100%;
+    height: 100%;
+  }
+  .list .container ul {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .list .container ul li {
+    min-width: 100%;
+    width: 100%;
+    height: calc((100% - 120px) / 3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 22px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .list .container ul li .box {
+    width: 60%;
+    height: 100%;
+  }
+  .list .container ul li .inside1,
+  .list .container ul li .inside2,
+  .list .container ul li .inside3 {
+    width: 60%;
+    height: 100%;
+  }
+  .list .container ul li .inside1 a,
+  .list .container ul li .inside2 a,
+  .list .container ul li .inside3 a {
+    font-size: 18px;
+  }
+  .list .container ul li button {
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=design.css.map */
