@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Oleo Script', cursive, sans-serif;
+  font-family: cursive, fantasy, sans-serif;
 }
 
 // var
@@ -204,6 +204,7 @@ header{
                   border-radius: 30px;
                   overflow: hidden;
                   box-shadow: 0 0 30px $light-blue;
+                  z-index: 1;
 
                     img{
                       width: 100%;
